@@ -36,6 +36,9 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card__like-button {
   background: url(../images/likebutton.svg) #000000;

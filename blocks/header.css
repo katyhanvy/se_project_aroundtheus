@@ -1,13 +1,15 @@
 .header {
   height: 74px;
+  margin-top: 45px;
+  max-width: 880px;
 }
 .header__image {
-  width: 173px;
+  max-width: 173px;
   height: 33px;
 }
 .header__line {
   position: absolute;
-  width: 880px;
+  max-width: 880px;
   height: 0px;
   opacity: 0.7;
   border: 1px solid #545454;
