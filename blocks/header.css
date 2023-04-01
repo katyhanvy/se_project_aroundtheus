@@ -1,0 +1,15 @@
+.header {
+  width: 880px;
+  height: 74px;
+}
+.header__image {
+  width: 173px;
+  height: 33px;
+}
+.header__line {
+  position: absolute;
+  width: 880px;
+  height: 0px;
+  opacity: 0.7;
+  border: 1px solid #545454;
+}
