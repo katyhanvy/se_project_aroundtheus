@@ -17,6 +17,8 @@
   width: 282px;
   height: 361px;
   flex-direction: column;
+  display: flex;
+  align-items: flex-start;
 }
 .card__image {
   height: 282px;
@@ -36,12 +38,19 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  width: 193px;
+  height: 29px;
+}
+.card__description {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 .card__like-button {
-  background: url(../images/likebutton.svg) #000000;
+  display: flex;
+  justify-content: flex-end;
+  background: url(../images/heart.svg) white;
   height: 18px;
   width: 21px;
+  border-style: none;
 }
