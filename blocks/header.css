@@ -7,6 +7,8 @@
   max-width: 173px;
   height: 33px;
 }
+.header__image-container {
+}
 .header__line {
   position: absolute;
   max-width: 880px;
