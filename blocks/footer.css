@@ -10,3 +10,35 @@
   line-height: 22px;
   color: #545454;
 }
+@media screen and (max-width: 470px) {
+  .footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .footer__copyright {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 665px) {
+  .footer {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer__copyright {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
