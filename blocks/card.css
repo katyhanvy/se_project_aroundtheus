@@ -4,7 +4,7 @@
   max-width: 880px;
   width: 100%;
 }
-.card__list {
+.cards__list {
   list-style: none;
   display: grid;
   justify-content: center;
