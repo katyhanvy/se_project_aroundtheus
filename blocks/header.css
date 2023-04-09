@@ -1,10 +1,7 @@
-.header {
-  height: 74px;
-  max-width: 880px;
-}
 .header__image {
   max-width: 173px;
   height: 33px;
+  margin-top: 45px;
 }
 .header__image-container {
   width: 880px;
