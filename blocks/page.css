@@ -1,6 +1,7 @@
 .page {
   background-color: black;
   color: white;
+  margin: 0;
 }
 .page__content {
   margin: 0 auto;
@@ -12,13 +13,13 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1100px) {
-  .page__section {
-    margin: 0 20px;
-    max-width: calc(100% - 40px);
+@media screen and (max-width: 768px) {
+  .page__content {
+    display: flex;
+    margin: 0 16px;
+    max-width: calc(100% - 16px);
   }
 }
-@media screen and (max-width: 320px) {
-  .page__section {
-  }
+
+@media screen and (max-width: 450px) {
 }
