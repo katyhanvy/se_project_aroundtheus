@@ -15,11 +15,15 @@
 
 @media screen and (max-width: 768px) {
   .page__content {
-    display: flex;
-    margin: 0 16px;
-    max-width: calc(100% - 16px);
+    margin: 0 20px;
+    max-width: calc(100% - 20px);
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
+  .page__section {
+    padding: 40px 73px 27px 78px;
+    width: 100%;
+    align-items: center;
+  }
 }
