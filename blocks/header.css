@@ -12,3 +12,8 @@
   border: 1px solid #545454;
   margin: 41px auto 62px auto;
 }
+@media screen and (max-width: 480px) {
+  .header__image-container {
+    width: 100%;
+  }
+}

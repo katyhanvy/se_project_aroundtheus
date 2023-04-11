@@ -24,7 +24,7 @@
 .profile__title-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 }
 .profile__description {
   font-family: "Inter";
@@ -53,7 +53,6 @@
 }
 
 .profile__add-button {
-  margin-bottom: 35px;
   padding: 14px 64px;
   background-color: black;
   box-sizing: border-box;
@@ -61,6 +60,8 @@
   height: 50px;
   width: 150px;
   border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 .profile__add-button-icon {
@@ -68,10 +69,6 @@
   width: 22px;
 }
 
-@media screen and (max-width: 750px) {
-  .profile {
-  }
-}
 @media screen and (max-width: 480px) {
   .profile {
     flex-direction: column;
@@ -91,5 +88,6 @@
   .profile__add-button {
     margin: 0;
     width: 100%;
+    padding: 0;
   }
 }
