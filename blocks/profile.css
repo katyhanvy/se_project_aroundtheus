@@ -1,17 +1,18 @@
 .profile {
+  color: #fff;
   display: flex;
-}
-.profile__picture {
-  width: 120px;
-  height: 120px;
-  background: #c4c4c4;
-  border-radius: 50%;
-  margin-right: 30px;
+  align-items: center;
+  padding: 40px 0 32px;
 }
 .profile__info {
-  height: 120px;
-  width: 880px;
+  display: grid;
+  grid-template-areas:
+    "title button"
+    "description description";
+  grid-template-columns: minmax(auto, 373px) auto;
+  grid-gap: 9px 17px;
 }
+
 .profile__title {
   color: #ffffff;
   font-family: "Inter";
@@ -20,11 +21,7 @@
   font-size: 42px;
   line-height: 48px;
   margin: 0 14px 0 0;
-}
-.profile__title-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  grid-area: title;
 }
 .profile__description {
   font-family: "Inter";
@@ -32,20 +29,35 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  width: 415px;
-  height: 22px;
-  color: #ffffff;
+  max-width: 373px;
+  margin: 0;
+  grid-area: description;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.profile__picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+  background-position: center;
+}
+.profile__title-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  background-repeat: no-repeat;
-  margin: 7px 0 0 0;
 }
 .profile__edit-button {
   height: 24px;
   width: 24px;
-  background-color: black;
-  box-sizing: border-box;
+  background: transparent url("../images/edit-button.svg") center no-repeat;
+  background-size: 10px 10px;
   border: 1px solid #ffffff;
+  grid-area: "button";
+  align-self: center;
+  padding: 0;
+  margin: 0;
 }
 .profile__edit-button-icon {
   height: 10px;
@@ -62,32 +74,80 @@
   border: 1px solid #ffffff;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .profile__add-button-icon {
   height: 22px;
   width: 22px;
 }
-
-@media screen and (max-width: 480px) {
-  .profile {
-    flex-direction: column;
-  }
+@media screen and (max-width: 768px) {
   .profile__info {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    padding-left: 62px;
-    padding-right: 62px;
+    grid-template-columns: auto;
   }
-  .profile__description {
-    width: 100%;
+
+  .profile__title {
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 340px;
+  }
+
+  .profile__image {
+    margin: 0 10px 0 0;
+  }
+
+  .profile__add-button {
+    width: 50px;
+  }
+}
+
+/* this is where the cards drop to 1 column, so the profile can change to mobile style */
+@media screen and (max-width: 621px) {
+  .profile {
+    padding: 43px 0 21px;
+    flex-direction: column;
     text-align: center;
   }
-  .profile__add-button {
-    margin: 0;
+
+  .profile__info {
     width: 100%;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 29px 0 33px 0;
+    max-width: 320px;
+    gap: 10px 14px;
+  }
+
+  .profile__title {
+    font-size: 22px;
+    min-width: 201px;
+    max-width: 222px;
+    /*
+      According to the design. Actually, I think there should be a spacing between the title and the icon, but the title frame is flawed. Don't be too strict with students here.
+    */
+  }
+
+  .profile__description {
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    max-width: 282px;
+  }
+
+  .profile__image {
+    margin-right: 0;
+  }
+
+  .profile__add-button {
+    width: 100%;
+    max-width: 282px;
+    margin: 0 auto;
+  }
+
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    background-size: 8px 8px;
   }
 }
