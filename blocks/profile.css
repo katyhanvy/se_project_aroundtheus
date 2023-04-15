@@ -81,27 +81,6 @@
   height: 22px;
   width: 22px;
 }
-@media screen and (max-width: 768px) {
-  .profile__info {
-    grid-template-columns: auto;
-  }
-
-  .profile__title {
-    font-size: 32px;
-    line-height: 38px;
-    max-width: 340px;
-  }
-
-  .profile__image {
-    margin: 0 10px 0 0;
-  }
-
-  .profile__add-button {
-    width: 50px;
-  }
-}
-
-/* this is where the cards drop to 1 column, so the profile can change to mobile style */
 @media screen and (max-width: 621px) {
   .profile {
     padding: 43px 0 21px;
@@ -123,9 +102,6 @@
     font-size: 22px;
     min-width: 201px;
     max-width: 222px;
-    /*
-      According to the design. Actually, I think there should be a spacing between the title and the icon, but the title frame is flawed. Don't be too strict with students here.
-    */
   }
 
   .profile__description {
@@ -150,4 +126,6 @@
     height: 18px;
     background-size: 8px 8px;
   }
+}
+@media screen and (max-width: 421px) {
 }

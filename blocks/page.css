@@ -2,7 +2,6 @@
   background: #000;
 }
 .page__content {
-  padding: 0 20px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -16,17 +15,8 @@
   display: flex;
 }
 
-/* @media screen and (max-width: 768px) {
-  .page__content {
-    margin: 0 20px;
-    max-width: calc(100% - 20px);
+@media screen and (max-width: 421px) {
+  .page__section {
+    margin: 0 auto;
   }
 }
-
-@media screen and (max-width: 480px) {
-  .page__section {
-    padding: 40px 73px 27px 78px;
-    width: 100%;
-    align-items: center;
-  }
-} */
