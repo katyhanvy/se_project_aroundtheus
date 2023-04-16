@@ -1,5 +1,6 @@
 .page {
   background: #000;
+  font-family: "Inter", "Arial", sans-serif;
 }
 .page__content {
   background-color: black;
