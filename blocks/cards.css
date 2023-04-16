@@ -3,6 +3,7 @@
   display: grid;
   max-width: 880px;
   width: 100%;
+  font-family: Inter;
 }
 .cards__list {
   list-style: none;
