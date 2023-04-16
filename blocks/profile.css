@@ -83,6 +83,7 @@
   height: 22px;
   width: 22px;
 }
+
 @media screen and (max-width: 621px) {
   .profile {
     padding: 0;
