@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
+  opacity: 0.7;
 }
 .header__logo {
   width: 173px;
