@@ -22,3 +22,13 @@
     width: 95%;
   }
 }
+@media screen and (max-width: 320px) {
+  .header {
+    width: 100%;
+  }
+  .header__logo {
+    margin: 27px auto 32px 28px;
+    max-width: 126px;
+    height: 24px;
+  }
+}
