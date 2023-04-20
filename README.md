@@ -1,14 +1,16 @@
 # Project 3: Around The U.S.
 
-### Overview
+### Description
 
 - Intro
 - Figma
 - Images
 
-**Intro**
+###
 
 This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+
+#### Project Features
 
 **Figma**
 
@@ -21,3 +23,4 @@ The way you'll do this at work is by exporting images directly from Figma — we
 Good luck and have fun!
 
 https://github.com/katyhanvy/se_project_aroundtheus
+https://katyhanvy.github.io/se_project_aroundtheus/
