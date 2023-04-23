@@ -11,17 +11,13 @@
   color: #545454;
   margin: 0;
 }
+
 @media screen and (max-width: 621px) {
   .footer__copyright {
     padding-left: 18px;
   }
 }
-@media screen and (max-width: 421px) {
-  .footer__copyright {
-    padding-left: 60px;
-  }
-}
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .footer {
     max-width: 282px;
   }

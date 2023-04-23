@@ -4,6 +4,9 @@
   align-items: center;
   padding: 40px 0 32px;
   margin-bottom: 51px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .profile__info {
   display: flex;
@@ -24,9 +27,9 @@
   line-height: 48px;
   margin: 0;
   grid-area: title;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; */
 }
 .profile__description {
   font-family: "Inter", "Arial", sans-serif;
@@ -134,7 +137,7 @@
     background-size: 8px 8px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .profile__info {
     justify-content: center;
     gap: 14px 10px;
