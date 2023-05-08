@@ -16,6 +16,7 @@
     "description description";
   grid-template-columns: minmax(auto, 373px) auto;
   grid-gap: 7px 18px;
+  max-width: 373px;
 }
 
 .profile__title {
@@ -82,7 +83,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 165px;
+  margin-left: auto;
+
   cursor: pointer;
 }
 
@@ -94,92 +96,29 @@
 .profile__add-button:hover {
   opacity: 0.6;
 }
-@media screen and (max-width: 621px) {
+
+@media screen and (max-width: 480px) {
   .profile {
-    padding: 0;
-    margin: 43px 0 36px;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0;
   }
-
-  .profile__info {
-    width: 100%;
-    margin: 29px 0 33px 15px;
-    max-width: 320px;
-    gap: 7px 18px;
-  }
-
   .profile__title {
     font-size: 22px;
-    max-width: 100%;
+    font-weight: 500;
+    text-align: center;
   }
-
   .profile__description {
-    width: 100%;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
-    max-width: 282px;
   }
-
-  .profile__picture {
-    margin-right: 10px;
-    margin-left: 15px;
-  }
-
   .profile__add-button {
+    margin: 0 auto;
+    width: 282px;
+  }
+  .footer {
     width: 100%;
-    max-width: 150px;
-    margin: 0 20px 0 0;
   }
-
-  .profile__edit-button {
-    width: 18px;
-    height: 18px;
-    background-size: 8px 8px;
-  }
-}
-@media screen and (max-width: 580px) {
-  .profile__info {
-    justify-content: center;
-    gap: 14px 10px;
-    margin: 26px 19px 36px 19px;
-  }
-  .profile__picture {
-    margin: 0;
-  }
-  .profile__add-button {
-    margin: 0;
-    max-width: 282px;
-  }
-  .profile__description {
-    padding: 0 19px 0 19px;
-    display: flex;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 320px) {
-  .profile__info {
-    justify-content: center;
-
-    gap: 14px 10px;
-
-    margin: 26px 19px 36px 19px;
-  }
-
-  .profile__picture {
-    margin: 0;
-  }
-
-  .profile__add-button {
-    margin: 0;
-
-    max-width: 282px;
-  }
-
-  .profile__description {
-    padding: 0 19px 0 19px;
-
-    display: flex;
-
-    justify-content: center;
+  .footer__copyright {
+    margin: 48px 19px 36px 19px;
   }
 }
