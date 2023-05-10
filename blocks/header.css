@@ -18,16 +18,15 @@
 
 @media screen and (max-width: 621px) {
   .header {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 580px) {
-  .header {
     width: 100%;
+    margin: 0;
   }
   .header__logo {
-    margin: 27px auto 32px 28px;
-    max-width: 126px;
-    height: 24px;
+    margin-left: 27px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__logo {
+    margin-left: 27px;
   }
 }
