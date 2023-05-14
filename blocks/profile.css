@@ -6,7 +6,6 @@
   margin-bottom: 51px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 .profile__info {
   display: flex;
@@ -143,7 +142,6 @@
 }
 @media screen and (max-width: 480px) {
   .profile {
-    flex-direction: column;
     margin: 0;
   }
   .profile__picture {
