@@ -16,7 +16,23 @@
   object-fit: contain;
 }
 
-@media screen and (max-width: 621px) {
+@media screen and (max-width: 879px) {
+  .header {
+    min-height: 85px;
+    width: 65%;
+  }
+  .header__logo {
+    margin-left: 27px;
+    max-width: 126px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header {
+    width: 100%;
+  }
+}
+
+/* @media screen and (max-width: 621px) {
   .header {
     width: 100%;
     margin: 0;
@@ -33,4 +49,4 @@
   .header__logo {
     max-width: 126px;
   }
-}
+} */
