@@ -19,7 +19,7 @@
 @media screen and (max-width: 879px) {
   .header {
     min-height: 85px;
-    width: 65%;
+    max-width: 581px;
   }
   .header__logo {
     margin-left: 27px;
@@ -31,22 +31,3 @@
     width: 100%;
   }
 }
-
-/* @media screen and (max-width: 621px) {
-  .header {
-    width: 100%;
-    margin: 0;
-  }
-  .header__logo {
-    margin-left: 27px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header {
-    min-height: 85px;
-  }
-  .header__logo {
-    max-width: 126px;
-  }
-} */
