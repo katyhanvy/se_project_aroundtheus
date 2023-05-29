@@ -102,10 +102,12 @@
   }
   .profile__info {
     margin-right: 0;
-    width: 240px;
+    max-width: 240px;
   }
   .profile__title {
     font-size: 22px;
+    max-width: 200px;
+    min-width: 170px;
   }
   .profile__edit-button {
     height: 18px;
