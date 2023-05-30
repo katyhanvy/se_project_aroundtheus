@@ -149,4 +149,7 @@
     font-size: 14px;
     line-height: 17px;
   }
+  .profile__title {
+    line-height: 27px;
+  }
 }
