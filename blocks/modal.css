@@ -114,8 +114,7 @@
 }
 @media screen and (max-width: 320px) {
     .modal__container {
-        max-width: 282px;   
-        height: 322px;
+        max-width: calc(100% - 19px * 2);
     }
 }
 
