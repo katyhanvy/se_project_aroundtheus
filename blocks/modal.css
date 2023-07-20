@@ -15,7 +15,7 @@
   background-color: #fff;
   margin: auto;
   border-radius: 10px;
-  width: 430px;
+  max-width: 430px;
   height: 330px;
 }
 .modal__close {
@@ -51,7 +51,7 @@
   width: 358px;
   height: 50px;
   text-align: center;
-  margin: 48px 36px 36px;
+  margin: 0;
   cursor: pointer;
 }
 .modal__button:hover {
@@ -65,13 +65,13 @@
 .modal__input {
   border: none;
   border-bottom: 1px solid rgba(84, 84, 84, 0.2);
-  max-width: 358px;
+  width: 358px;
   width: 100%;
   font-family: Inter, "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   padding: 0;
 }
 .modal__heading {
@@ -84,80 +84,34 @@
 }
 
 @media screen and (max-width: 580px) {
-    .modal__container {
-        max-width: 282px;
-        height: 322px;
-    }
-    .modal__input {
-        max-width: 238px;
-    }
-    .modal__button {
-        width: 238px;
-        height: 46px;
-        margin: 45px 22px 0 22px;
-    }
-    .modal__close {
-        height: 26px;
-        width: 26px;
-        bottom: calc(100% + 10px);
-        left: calc(100% - 33px);
-      }
-    .modal__form {
-        margin: 25px 22px;
-        width: 238px;
-        margin-bottom: 45px;
-        
-      }
-      .modal__heading {
-        margin-left: 22px;
-      }
-}
-@media screen and (max-width: 320px) {
-    .modal__container {
-        max-width: calc(100% - 19px * 2);
-    }
-}
-
-/*@media screen and (max-width: 589px) {
   .modal__container {
-    max-width: 282px;
+    width: 282px;
     height: 322px;
-  }
-  .modal__close {
-    height: 26px;
-    width: 26px;
   }
   .modal__input {
     max-width: 238px;
   }
   .modal__button {
-    width: 238px;
+    max-width: 238px;
     height: 46px;
-    margin: 0 22px;
+  }
+  .modal__close {
+    height: 26px;
+    width: 26px;
+    bottom: calc(100% + 10px);
+    left: calc(100% - 33px);
   }
   .modal__form {
     margin: 25px 22px;
     width: 238px;
+    margin-bottom: 45px;
   }
   .modal__heading {
     margin-left: 22px;
   }
 }
-@media screen and (max-width: 415px) {
-  .modal__container {
-    padding: 0 16px;
-  }
-}
-@media screen and (max-width: 376px) {
-  .modal__container {
-  }
-}
 @media screen and (max-width: 320px) {
   .modal__container {
-    width: 282px;
-    align-items: center;
+    max-width: calc(100% - 19px * 2);
   }
-  .modal__close {
-    bottom: calc(100% + 10px);
-    left: calc(100% - 33px);
 }
