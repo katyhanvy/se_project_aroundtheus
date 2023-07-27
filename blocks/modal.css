@@ -8,6 +8,7 @@
   display: flex;
   z-index: 999;
   padding: 0 19px;
+  visibility: hidden;
 }
 .modal__container {
   padding: 36px;
@@ -38,6 +39,7 @@
 .modal__opened {
   display: flex;
   border: none;
+  visibility: visible;
 }
 .modal__button {
   color: #fff;
