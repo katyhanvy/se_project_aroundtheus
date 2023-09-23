@@ -114,3 +114,11 @@
     margin-left: 22px;
   }
 }
+@media screen and (max-width: 320px) {
+  .modal__input {
+    width: 85%;
+  }
+  .modal__button {
+    width: 85%;
+  }
+}
