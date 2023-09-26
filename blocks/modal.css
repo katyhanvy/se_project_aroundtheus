@@ -61,8 +61,7 @@
 }
 .modal__form {
   width: 358px;
-  height: 28px;
-  margin: 0 36px 48px;
+  margin: 0 36px 48px 0;
 }
 .modal__input {
   border: none;
@@ -82,7 +81,7 @@
   font-weight: 900;
   line-height: 23px;
   text-align: left;
-  margin: 34px 64px 54px 36px;
+  margin: 0 0 54px 0;
 }
 
 @media screen and (max-width: 568px) {
@@ -115,10 +114,11 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .modal__input {
-    width: 85%;
+  .modal__form {
+    padding: 0;
+    margin: 0;
   }
-  .modal__button {
-    width: 85%;
+  .modal__heading {
+    margin-left: 0;
   }
 }
