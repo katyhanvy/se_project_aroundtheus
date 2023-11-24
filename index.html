@@ -70,7 +70,30 @@
           <button class="modal__button">Save</button>
         </form>
       </div>
+
+      <div class="modal" id="profile-add-modal">
+        <div class="modal__container">
+          <button class="modal__close" id="profile-close-modal"></button>
+          <p class="modal__heading">New place</p>
+          <form class="modal__form">
+            <input
+              type="text"
+              name="title"
+              class="modal__input"
+              placeholder="Title"
+              id="profile-title-input"
+            />
+            <input
+              type="text"
+              class="modal__input"
+              placeholder="Image Link"
+              id="profile-description-input"
+            />
+            <button class="modal__add-button" id="add-button">Create</button>
+          </form>
+        </div>
     </div>
+
     <template id="card-template">
       <li class="card">
         <img src="" class="card__image" alt="" />

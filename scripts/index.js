@@ -1,31 +1,31 @@
 const initialCards = [
   {
-    name: "Yosemite Valley",
+    title: "Yosemite Valley",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
   },
 
   {
-    name: "Lake Louise",
+    title: "Lake Louise",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
   },
 
   {
-    name: "Bald Mountains",
+    title: "Bald Mountains",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
   },
 
   {
-    name: "Latemar",
+    title: "Latemar",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
   },
 
   {
-    name: "Vanoise National Park",
+    title: "Vanoise National Park",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
   },
 
   {
-    name: "Lago di Braies",
+    title: "Lago di Braies",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
@@ -39,6 +39,8 @@ const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 const cardListEl = document.querySelector(".cards__list");
+const cardAddPopup = document.querySelector("#profile-add-modal");
+const cardAddButton = document.querySelector("#add-button");
 const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
@@ -51,8 +53,8 @@ function getCardElement(cardData) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
   cardImageEl.src = cardData.link;
-  cardImageEl.alt = cardData.name;
-  cardTitleEl.textContent = cardData.name;
+  cardImageEl.alt = cardData.title;
+  cardTitleEl.textContent = cardData.title;
   return cardElement;
 }
 
@@ -72,7 +74,19 @@ profileEditForm.addEventListener("submit", (e) => {
   closePopup();
 });
 
-initialCards.forEach((cardData) => {
-  const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
+initialCards.forEach(function (cardData) {
+  //clone template
+  const cardEl = cardTemplate.cloneNode(true);
+  // find .card__image
+  const imageEl = cardEl.querySelector(".card__image");
+  // find card__title
+  const cardTitle = cardEl.querySelector(".card__title");
+  // replace image src
+  imageEl.src = cardData.link;
+  // replace image alt
+  imageEl.alt = cardData.title;
+  // replace title
+  cardTitle.textContent = cardData.title;
+  //append to list
+  cardListEl.appendChild(cardEl);
 });
