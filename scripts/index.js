@@ -67,11 +67,16 @@ profileEditButton.addEventListener("click", () => {
 profileCloseModalButton.addEventListener("click", () => {
   closePopup();
 });
+
 profileEditForm.addEventListener("submit", (e) => {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   closePopup();
+});
+
+cardAddButton.addEventListener("click", () => {
+  openPopup();
 });
 
 initialCards.forEach(function (cardData) {
