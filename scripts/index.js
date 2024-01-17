@@ -60,8 +60,11 @@ function getCardElement(cardData) {
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.title;
   cardTitleEl.textContent = cardData.title;
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("cardLikeButton");
+  });
   return cardElement;
-  const cardLikeButton = cardElement.querySelector(".card__like-button_active");
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -103,10 +106,4 @@ initialCards.forEach(function (cardData) {
   cardTitle.textContent = cardData.title;
   //append to list
   cardListEl.appendChild(cardEl);
-});
-const likeButton = document.querySelectorAll(".card__like-button");
-likeButton.forEach((likeButton) => {
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle(".card__like-button_active");
-  });
 });
