@@ -61,6 +61,7 @@ function getCardElement(cardData) {
   cardImageEl.alt = cardData.title;
   cardTitleEl.textContent = cardData.title;
   return cardElement;
+  const cardLikeButton = cardElement.querySelector(".card__like-button_active");
 }
 
 profileEditButton.addEventListener("click", () => {
