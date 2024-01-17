@@ -50,7 +50,7 @@ function openPopup(modal) {
   modal.classList.add("modal_opened");
 }
 function closePopup(modal) {
-  modal.classList.remove("modal_close");
+  modal.classList.remove("modal_opened");
 }
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -65,15 +65,11 @@ function getCardElement(cardData) {
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
   openPopup(profileEditModal);
 });
 
-function closePopup(modal) {
-  cardAddButton.classList.remove("#modal__close");
-}
 profileCloseModalButton.addEventListener("click", () => {
-  closePopup();
+  closePopup(profileEditModal);
 });
 
 profileEditForm.addEventListener("submit", (e) => {
@@ -85,6 +81,9 @@ profileEditForm.addEventListener("submit", (e) => {
 
 cardAddButton.addEventListener("click", () => {
   openPopup(cardAddPopup);
+});
+cardAddButton.addEventListener("click", () => {
+  closePopup();
 });
 
 initialCards.forEach(function (cardData) {
@@ -103,9 +102,8 @@ initialCards.forEach(function (cardData) {
   //append to list
   cardListEl.appendChild(cardEl);
 });
-
-const likeButtons = document.querySelectorAll(".card__like-button");
-likeButtons.forEach((likeButton) => {
+const likeButton = document.querySelectorAll(".card__like-button");
+likeButton.forEach((likeButton) => {
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle(".card__like-button_active");
   });
