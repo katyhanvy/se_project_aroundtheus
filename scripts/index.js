@@ -62,7 +62,7 @@ function getCardElement(cardData) {
   cardTitleEl.textContent = cardData.title;
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {
-    cardLikeButton.classList.toggle("cardLikeButton");
+    cardLikeButton.classList.toggle(cardLikeButton);
   });
   return cardElement;
 }
