@@ -62,10 +62,14 @@ function getCardElement(cardData) {
   cardTitleEl.textContent = cardData.title;
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {
-    cardLikeButton.classList.toggle(cardLikeButton);
+    cardLikeButton.classList.toggle(".card__like-button_active");
   });
   return cardElement;
 }
+
+/*function handleImageLike(item) {
+  cardLikeButton.classList.add(".card__like-active")
+}*/
 
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
@@ -92,18 +96,5 @@ cardAddCloseButton.addEventListener("click", () => {
 });
 
 initialCards.forEach(function (cardData) {
-  //clone template
-  const cardEl = cardTemplate.cloneNode(true);
-  // find .card__image
-  const imageEl = cardEl.querySelector(".card__image");
-  // find card__title
-  const cardTitle = cardEl.querySelector(".card__title");
-  // replace image src
-  imageEl.src = cardData.link;
-  // replace image alt
-  imageEl.alt = cardData.title;
-  // replace title
-  cardTitle.textContent = cardData.title;
-  //append to list
-  cardListEl.appendChild(cardEl);
+  cardListEl.append(getCardElement(cardData));
 });
