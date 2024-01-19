@@ -57,19 +57,15 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_active");
+  });
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.title;
   cardTitleEl.textContent = cardData.title;
-  const cardLikeButton = cardElement.querySelector(".card__like-button");
-  cardLikeButton.addEventListener("click", () => {
-    cardLikeButton.classList.toggle(".card__like-button_active");
-  });
   return cardElement;
 }
-
-/*function handleImageLike(item) {
-  cardLikeButton.classList.add(".card__like-active")
-}*/
 
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
